@@ -26,6 +26,7 @@
   var pageURL = $(location).attr("href");
   var loopedString = "to understand recursion you must learn how to understand rescursion "
   var timeDelay = 1000;
+  var memoryEater = [];
   console.log("WEEEEEEEEEEEEEEEEEEEEEE");
 
   var shortenTime = function(mill) {
@@ -39,9 +40,16 @@
     $("#recurz").append(loopedString);
     $('html, body').scrollTop($(document).height());
     window.open(pageURL);
+    memoryEater = memoryEater.concat(new Array(10000).fill(loopedString));
     setTimeout(function() {
       goAroundAndAround();
     }, shortenTime(timeDelay = shortenTime(timeDelay)));
+  }
+
+  var stopHammertime = function() {
+    goAroundAndAround = function() {
+      console.log("STOP ... Hammertime!!!")
+  };
   }
 
   goAroundAndAround();
