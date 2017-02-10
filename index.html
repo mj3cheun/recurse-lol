@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <style>
+    #recurz {
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="recurz">
+  </div>
+</body>
+<script>
+  var loopedString = "to understand recursion you must learn how to understand rescursion "
+  console.log("WEEEEEEEEEEEEEEEEEEEEEE");
+  var goAroundAndAround = function() {
+    console.log("EEEEEEEEEEEEEEEEEEEEEEE");
+    $("#recurz").append(loopedString);
+    $('html, body').scrollTop($(document).height());
+    setTimeout(function() {
+      goAroundAndAround();
+    }, 10);
+  }
+  goAroundAndAround();
+</script>
+
+</html>
