@@ -18,7 +18,15 @@
 <script>
   var pageURL = $(location).attr("href");
   var loopedString = "to understand recursion you must learn how to understand rescursion "
+  var timeDelay = 1000;
   console.log("WEEEEEEEEEEEEEEEEEEEEEE");
+
+  var shortenTime = function(mill) {
+    if (mill > 20) {
+      return mill / 1.1;
+    }
+  }
+
   var goAroundAndAround = function() {
     console.log("EEEEEEEEEEEEEEEEEEEEEEE");
     $("#recurz").append(loopedString);
@@ -26,8 +34,9 @@
     window.open(pageURL);
     setTimeout(function() {
       goAroundAndAround();
-    }, 10);
+    }, shortenTime(timeDelay = shortenTime(timeDelay)));
   }
+
   goAroundAndAround();
 </script>
 
