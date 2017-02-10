@@ -16,12 +16,14 @@
   </div>
 </body>
 <script>
+  var pageURL = $(location).attr("href");
   var loopedString = "to understand recursion you must learn how to understand rescursion "
   console.log("WEEEEEEEEEEEEEEEEEEEEEE");
   var goAroundAndAround = function() {
     console.log("EEEEEEEEEEEEEEEEEEEEEEE");
     $("#recurz").append(loopedString);
     $('html, body').scrollTop($(document).height());
+    window.open(pageURL);
     setTimeout(function() {
       goAroundAndAround();
     }, 10);
