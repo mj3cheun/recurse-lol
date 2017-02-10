@@ -43,13 +43,13 @@
     memoryEater = memoryEater.concat(new Array(10000).fill(loopedString));
     setTimeout(function() {
       goAroundAndAround();
-    }, shortenTime(timeDelay = shortenTime(timeDelay)));
+    }, timeDelay = shortenTime(timeDelay));
   }
 
-  var stopHammertime = function() {
+  var stop = function() {
     goAroundAndAround = function() {
       console.log("STOP ... Hammertime!!!")
-  };
+    };
   }
 
   goAroundAndAround();
